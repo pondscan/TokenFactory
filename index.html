@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Factory Interface</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 40px;
+            width: 400px;
+            background-color: #1f1f1f;
+        }
+        .warning, .status {
+            color: #ffcc00;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        button, input {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        button {
+            background-color: #1e88e5;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0a7bce;
+        }
+        input {
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+        }
+        .instructions {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>ERC20 Token Factory</h1>
+    <button id="connectButton">Connect Wallet</button>
+    <div id="networkDisplay">Network: N/A</div>
+    <div id="addressDisplay">Address: N/A</div>
+    <input type="text" id="tokenName" placeholder="Token Name" disabled>
+    <input type="text" id="tokenSymbol" placeholder="Token Symbol" disabled>
+    <input type="number" id="tokenSupply" placeholder="Initial Supply (in Wei)" disabled>
+    <button id="deployButton" disabled>Deploy Token</button>
+    <div class="warning">
+        Please ensure you are connected to the Magma Testnet (Chain ID: 6969696969) to deploy tokens.
+    </div>
+    <ul class="instructions">
+        <li>Connect your wallet using the "Connect Wallet" button.</li>
+        <li>Ensure your wallet is connected to the Magma Testnet.</li>
+        <li>Enter the details for your new token including name, symbol, and initial supply.</li>
+        <li>Click "Deploy Token" to create your token.</li>
+    </ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
