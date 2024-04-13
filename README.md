@@ -35,7 +35,7 @@ Before you start, make sure you have:
 5. **Deploy Your Token:**
    - Click the "Deploy Token" button after filling out all the details.
    - Approve the transaction in your wallet.
-   - Once the transaction is confirmed, your token will be deployed to the Magma Testnet.
+   - Once the transaction is confirmed, your token will be deployed to the Magma Testnet and the tokens will arrive in your connected wallet. Use https://www.magmascan.org to verify deployment.
 
 ## Additional Information
 
